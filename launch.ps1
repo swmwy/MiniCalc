@@ -1,1 +1,1 @@
-
+python minicalc.py
