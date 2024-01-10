@@ -1,30 +1,48 @@
 # MiniCalc by swmwy
-operation = input("Choose an operation: a for addition, s for subtraction, m for multiplication, and d for division.\n")
 
-if operation == 'd':
-  operation = 'division'
+minicalc = True
 
-elif operation == 'a':
-  operation = 'division'
+while minicalc = True:
 
-elif operation == 's':
-  operation = 'subtraction'
+  operation = input("Choose an operation: a for addition, s for subtraction, m for multiplication, and d for division.\n")
 
-elif operation == 'm':
-  operation = 'multiplication'
+  if operation == 'd':
+    operation = 'division'
 
-else:
-  print("Error: could not detect operation. (Hint: Make sure the letter is lowercase.)")
+  elif operation == 'a':
+    operation = 'division'
 
-num1 = input("Enter the first number:")
+  elif operation == 's':
+    operation = 'subtraction'
 
-num2 = input("Enter the second number:")
+  elif operation == 'm':
+    operation = 'multiplication'
 
-if operation == 'division':
-  if num1 == 0:
-    print("Divide by 0 error.")
-  elif num2 == 0:
-    print("Divide by 0 error.")
   else:
-    solution = num1 / num2
+    print("Error: could not detect operation. (Hint: Make sure the letter is lowercase.)")
 
+  num1 = input("Enter the first number:")
+
+  num2 = input("Enter the second number:")
+
+  int(num1)
+  int(num2)
+
+  if operation == 'division':
+    if num1 == 0:
+      print("Divide by 0 error.")
+    elif num2 == 0:
+      print("Divide by 0 error.")
+    else:
+      solution = num1 / num2
+
+  if operation == 'subtraction':
+    solution = num1 - num2
+
+  if operation == 'addition':
+    solution = num1 + num2
+
+  if operation == 'multiplication':
+    solution = num1 * num2
+
+  print(solution)
