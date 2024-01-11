@@ -4,3 +4,4 @@ MiniCalc is the miniature calculator that runs in the terminal. You can use it f
 ## Installation Instructions
 
 ### Linux
+Change the directory to MiniCalc by using the ```script cd ``` command.
