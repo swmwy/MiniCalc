@@ -1,48 +1,55 @@
 # MiniCalc by swmwy
 
+from time import sleep
+
 minicalc = True
 
-while minicalc == True:
+while minicalc is True:
 
-  operation = input("Choose an operation: a for addition, s for subtraction, m for multiplication, and d for division.\n")
+  error = True
 
-  if operation == 'd':
-    operation = 'division'
+  while error is True:
+  
+    operation = input("Choose an operation: a for addition, s for subtraction, etc.\n")
 
-  elif operation == 'a':
-    operation = 'division'
-
-  elif operation == 's':
-    operation = 'subtraction'
-
-  elif operation == 'm':
-    operation = 'multiplication'
-
-  else:
-    print("Error: could not detect operation. (Hint: Make sure the letter is lowercase.)")
-
+    if operation == 'd':
+      operation = 'division'
+      error = False
+    elif operation == 'a':
+      operation = 'addition'
+      error = False
+    elif operation == 's':
+      operation = 'subtraction'
+      error = False
+    elif operation == 'm':
+      operation = 'multiplication'
+      error = False
+    else:
+      print("Error: could not detect operation.")
+      error = True
   num1 = input("Enter the first number:")
 
+  sleep(1)
+  
   num2 = input("Enter the second number:")
 
-  int(num1)
-  int(num2)
-
+  sleep(1)
+  
   if operation == 'division':
-    if num1 == 0:
-      print("Divide by 0 error.")
-    elif num2 == 0:
+    if num1 == 0 or num2 == 0:
       print("Divide by 0 error.")
     else:
-      solution = num1 / num2
+      solution = int(num1) / int(num2)
 
-  if operation == 'subtraction':
-    solution = num1 - num2
+  elif operation == 'subtraction':
+    solution = int(num1) - int(num2)
 
-  if operation == 'addition':
-    solution = num1 + num2
+  elif operation == 'addition':
+    solution = int(num1) + int(num2)
 
-  if operation == 'multiplication':
-    solution = num1 * num2
+  elif operation == 'multiplication':
+    solution = int(num1) * int(num2)
 
+  sleep(1)
   print(solution)
+  sleep(1)
