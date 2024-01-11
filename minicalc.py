@@ -2,7 +2,7 @@
 
 minicalc = True
 
-while minicalc = True:
+while minicalc == True:
 
   operation = input("Choose an operation: a for addition, s for subtraction, m for multiplication, and d for division.\n")
 
