@@ -27,6 +27,7 @@ while minicalc is True:
     else:
       print("Error: could not detect operation.")
       error = True
+      sleep(1)
   num1 = input("Enter the first number:")
 
   sleep(1)
@@ -38,6 +39,7 @@ while minicalc is True:
   if operation == 'division':
     if num1 == 0 or num2 == 0:
       print("Divide by 0 error.")
+      sleep(1)
     else:
       solution = int(num1) / int(num2)
 
